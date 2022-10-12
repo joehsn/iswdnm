@@ -458,6 +458,7 @@ const ResponsiveAppBar = () => {
                       sx={{
                         my: 2,
                         display: "flex",
+                        textTransform: "initial",
                         justifyContent: "flex-start",
                       }}
                       variant="text"

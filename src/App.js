@@ -155,7 +155,7 @@ function App() {
               alt="(max-width:900px)"
               sx={{
                 width: { xs: "100%", md: "auto" },
-                height: { xs: "auto", md: "100%" },
+                height: { xs: "auto", md: "525px" },
               }}
             />
           </Box>
