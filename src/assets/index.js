@@ -1,0 +1,11 @@
+export { default as heroDesktop } from "./image-hero-desktop.png";
+export { default as heroMobile } from "./image-hero-mobile.png";
+export { default as clientAudiophile } from "./client-audiophile.svg";
+export { default as clientDatabiz } from "./client-databiz.svg";
+export { default as clientMaker } from "./client-maker.svg";
+export { default as clientMeet } from "./client-meet.svg";
+export { default as iconTodo } from "./icon-todo.svg";
+export { default as iconPlanning } from "./icon-planning.svg";
+export { default as iconReminders } from "./icon-reminders.svg";
+export { default as iconCalendar } from "./icon-calendar.svg";
+export { default as logo } from "./logo.svg";
