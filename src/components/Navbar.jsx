@@ -84,10 +84,11 @@ const ResponsiveAppBar = () => {
           >
             <img src={logo} alt="logo" />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ ml: 5, flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               sx={{
-                my: 2,
+                mt: 1.5,
+                mb: 2.5,
                 display: "flex",
                 textTransform: "initial",
                 ":hover": {
@@ -157,7 +158,8 @@ const ResponsiveAppBar = () => {
             {/* Menu for Features */}
             <Button
               sx={{
-                my: 2,
+                mt: 1.5,
+                mb: 2.5,
                 display: "flex",
                 textTransform: "initial",
                 ":hover": {
@@ -229,7 +231,8 @@ const ResponsiveAppBar = () => {
                 key={page}
                 href={`/${page.toLowerCase()}`}
                 sx={{
-                  my: 2,
+                  mt: 1.5,
+                  mb: 2.5,
                   display: "flex",
                   textTransform: "initial",
                   ":hover": {
