@@ -125,6 +125,8 @@ function App() {
               (imgSrc, index) => (
                 <Box
                   key={index}
+                  width="auto"
+                  height="auto"
                   component="img"
                   src={imgSrc}
                   alt={`${imgSrc} brand logo`}
@@ -142,20 +144,32 @@ function App() {
             )}
           </Box>
         </Box>
-        <Box>
+        {/* Need to centralize the the image */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Box component="picture" sx={{ width: { xs: "100%", md: "auto" } }}>
             <Box
+              width="auto"
+              height="auto"
               component="source"
               media="(max-width:900px)"
               srcSet={heroMobile}
             />
             <Box
               component="img"
+              width="auto"
+              height="auto"
               src={heroDesktop}
               alt="(max-width:900px)"
               sx={{
                 width: { xs: "100%", md: "auto" },
-                height: { xs: "auto", md: "525px" },
+                height: { xs: "auto", md: "440px", lg: "525px" },
+                // maxHeight: { xs: "auto", md: "525px" },
               }}
             />
           </Box>
