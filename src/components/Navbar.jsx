@@ -9,8 +9,9 @@ import {
   MenuItem,
   Toolbar,
   Typography,
+  useTheme,
 } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   AccessAlarmRounded,
   Close,
@@ -18,16 +19,19 @@ import {
   KeyboardArrowDown,
   ListAltRounded,
   NotificationsRounded,
+  Brightness7,
+  Brightness4,
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { logo } from "../assets";
 import { grey } from "@mui/material/colors";
+import { ColorModeContext } from "../hooks/useDarkTheme";
 
 const pages = ["Careers", "About"];
 const featuresMenu = ["Todo List", "Calender", "Reminders", "Planning"];
 const companyMenu = ["History", "Our Team", "Blog"];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({ onClick }) => {
   const [drawer, setDrawer] = useState(false);
   const [featuresMenuState, setFeaturesMenuState] = useState(null);
   const [companyMenuState, setCompanyMenuState] = useState(null);
@@ -59,6 +63,9 @@ const ResponsiveAppBar = () => {
       return <AccessAlarmRounded sx={{ fill: "#8E4CB6" }} />;
     }
   };
+
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
 
   return (
     <AppBar
@@ -265,6 +272,17 @@ const ResponsiveAppBar = () => {
             >
               Register
             </Button>
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={colorMode.toggleColorMode}
+              color="inherit"
+            >
+              {theme.palette.mode === "dark" ? (
+                <Brightness7 />
+              ) : (
+                <Brightness4 />
+              )}
+            </IconButton>
           </Box>
           {/* ------------------------------------------------ MOBILE ------------------------------------ */}
           <Typography
