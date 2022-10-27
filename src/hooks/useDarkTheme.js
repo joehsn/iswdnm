@@ -1,7 +1,6 @@
 import { createContext, useState, useMemo, useEffect } from "react";
 import { createTheme, colors } from "@mui/material";
 
-// color design tokens export
 // mui theme settings
 export const themeSettings = (mode) => {
   return {
